@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet,ImageBackground} from 'react-native';
 import {useFocusEffect} from '@react-navigation/native';
 import {TabContext} from './navigation';
 import FishHook from '../../assets/svg/fish-hook.svg';
@@ -23,6 +23,8 @@ export default function Quiz({navigation}: any) {
 
   return (
     <View style={styles.container}>
+      <ImageBackground style={{ flex: 1 }} source={require('../../assets/bg.png')}>
+      
       <View style={styles.header}>
         <Fish width={56} height={56} />
         <View style={styles.coinsContainer}>
@@ -67,7 +69,7 @@ export default function Quiz({navigation}: any) {
           setIsKnowFish={setIsKnowFish}
           isKnowFish={isKnowFish}
         />
-      )}
+      )}</ImageBackground>
     </View>
   );
 }
@@ -75,8 +77,8 @@ export default function Quiz({navigation}: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    backgroundColor: '#D9F2F7',
+    //paddingHorizontal: 20,
+    //backgroundColor: '#D9F2F7',
   },
   header: {
     paddingTop: 60,

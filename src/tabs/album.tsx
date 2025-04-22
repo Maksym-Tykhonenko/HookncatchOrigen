@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image,ImageBackground } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { TabContext } from './navigation';
 import FishHook from '../../assets/svg/fish-hook.svg';
@@ -57,7 +57,9 @@ export default function Album({ navigation, route}: any) {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={{ flex: 1, marginHorizontal: 20 }}>
+      <ImageBackground style={{ flex: 1 }} source={require('../../assets/bg.png')}>
+      
       <View style={styles.header}>
         <TouchableOpacity
           activeOpacity={0.7}
@@ -126,7 +128,8 @@ export default function Album({ navigation, route}: any) {
           )
         })}
       </View>
-      }
+        }
+        </ImageBackground>
     </View>
   )
 };
@@ -134,8 +137,8 @@ export default function Album({ navigation, route}: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
-    backgroundColor: '#D9F2F7',
+    //paddingHorizontal: 20,
+    //backgroundColor: '#D9F2F7',
   },
   header: {
     paddingTop: 60,

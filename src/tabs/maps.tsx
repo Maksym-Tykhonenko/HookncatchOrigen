@@ -256,7 +256,7 @@ export default function Maps() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#D9F2F7',
+    //backgroundColor: '#D9F2F7',
     flex: 1,
   },
   header: {
