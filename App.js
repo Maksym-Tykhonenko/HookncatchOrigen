@@ -707,7 +707,7 @@ function App() {
 
   return (
     <NavigationContainer>
-      {!louderIsEnded ? (
+      {!louderIsEnded || !aceptTransperency || !completeLink ? (
         <View
           style={{
             position: 'relative',
